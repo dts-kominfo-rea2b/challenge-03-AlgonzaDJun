@@ -23,13 +23,12 @@ const dataBelanjaan = [
 // membuat fungsi listBelanjaan
 
 const listBelanjaan = (listBelanja) => {
-  let data = []
-  for (let i = 0; i < listBelanja.length; i++) {  
-    data.push(`- ${dataBelanjaan[i].nama} x ${dataBelanjaan[i].kuantitas}`);
+  let data = [];
+  for (let i = 0; i < listBelanja.length; i++) {
+    data.push(`- ${listBelanja[i].nama} x ${listBelanja[i].kuantitas}`);
   }
   return data;
 };
-
 
 // membuat fungsi totalBelanjaan
 const totalBelanjaan = (listBelanja) => {
