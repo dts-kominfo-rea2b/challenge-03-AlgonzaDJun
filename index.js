@@ -1,5 +1,5 @@
 // ! JANGAN DIMOFIDIKASI
-const dataBelanjaan = [
+const listBelanja = [
   {
     id: "D-10001",
     nama: "Minyak Goreng Delima",
@@ -25,14 +25,14 @@ let data = [];
 
 const listBelanjaan = (listBelanja) => {
   for (let i = 0; i < listBelanja.length; i++) {
-    data.push(`- ${listBelanja[i].nama} x ${listBelanja[i].kuantitas}`);
+    data.push("- " + listBelanja[i].nama + " x " + listBelanja[i].kuantitas);
   }
   return data;
 };
 
 // membuat fungsi totalBelanjaan
 
-data2 = 0;
+let data2 = 0;
 const totalBelanjaan = (listBelanja) => {
   for (let i = 0; i < listBelanja.length; i++) {
     data2 += (listBelanja[i].harga * listBelanja[i].kuantitas);
@@ -42,19 +42,19 @@ const totalBelanjaan = (listBelanja) => {
 
 // ! JANGAN DIMODIFIKASI
 const main = () => {
-  console.log("Selamat datang customer");
+  console.log("Selamat datang customer\n");
 
   console.log("Belanjaan Anda adalah:");
-  console.log(listBelanjaan?.(dataBelanjaan)?.join("\n"));
+  console.log(listBelanjaan?.(listBelanja)?.join("\n"));
   console.log(
-    "\nTotal Belanjaan Anda adalah Rp. " + totalBelanjaan?.(dataBelanjaan)
+    "\nTotal Belanjaan Anda adalah Rp. " + totalBelanjaan?.(listBelanja)
   );
 };
 
 main();
 
 module.exports = {
-  dataBelanjaan,
+  dataBelanjaan: listBelanja,
   listBelanjaan,
   totalBelanjaan,
 };
