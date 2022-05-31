@@ -25,7 +25,7 @@ let data = [];
 
 const listBelanjaan = (listBelanja) => {
   for (let i = 0; i < listBelanja.length; i++) {
-    data.push(`${listBelanja[i].nama} x ${listBelanja[i].kuantitas}`);
+    data.push(`- ${listBelanja[i].nama} x ${listBelanja[i].kuantitas}`);
   }
   return data;
 };
@@ -35,7 +35,7 @@ const listBelanjaan = (listBelanja) => {
 data2 = 0;
 const totalBelanjaan = (listBelanja) => {
   for (let i = 0; i < listBelanja.length; i++) {
-    data2 += listBelanja[i].harga * listBelanja[i].kuantitas;
+    data2 += (listBelanja[i].harga * listBelanja[i].kuantitas);
   }
   return data2;
 };
